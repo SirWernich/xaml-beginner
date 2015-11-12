@@ -6,7 +6,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
@@ -20,10 +19,20 @@
             <ColumnDefinition Width="2.5*" />
             <ColumnDefinition Width="2.5*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Special Requests" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <AppBar Grid.ColumnSpan="3">
+            <AppBarButton Icon="Home" Click="AppBarButton_Click"></AppBarButton>
+        </AppBar>
+        <ListView Grid.Row="1" Grid.Column="0" Margin="10" Grid.RowSpan="3">
+
+        </ListView>
+        <ListView Grid.Row="2" Grid.Column="2" Margin="10" Grid.RowSpan="2">
+
+        </ListView>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="textBlock" Text="Special Requests" VerticalAlignment="Center" HorizontalAlignment="Center" />
         <TextBlock Grid.Row="1" Grid.Column="2" Text="Order Items" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="**Add to Order**" VerticalAlignment="Center" HorizontalAlignment="Center" />
-        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="**Submit Order**" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Button Margin="0 0 0 10"  Grid.Row="4" Grid.Column="0" Content="Add to Order" VerticalAlignment="Center" HorizontalAlignment="Center" Click="AddToOrderButton_Click" />
+        <Button Margin="0 0 0 10"  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Content="Submit Order" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SubmitOrderButton_Click" />
     </Grid>
 </Page>

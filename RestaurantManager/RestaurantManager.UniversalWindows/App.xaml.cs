@@ -22,6 +22,7 @@ namespace RestaurantManager.UniversalWindows
     /// </summary>
     sealed partial class App : Application
     {
+        private Type pageType = typeof(OrderPage);
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -43,7 +44,7 @@ namespace RestaurantManager.UniversalWindows
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+               // this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
 
@@ -66,13 +67,14 @@ namespace RestaurantManager.UniversalWindows
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
-
+        
             if (rootFrame.Content == null)
             {
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
+               // rootFrame.Navigate(pageType, e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();

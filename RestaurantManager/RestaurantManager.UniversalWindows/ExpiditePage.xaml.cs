@@ -26,5 +26,15 @@ namespace RestaurantManager.UniversalWindows
         {
             this.InitializeComponent();
         }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
+
+        private void ClearOrdersButton_Click(object sender, RoutedEventArgs e)
+        {
+            // clear all orders on page
+        }
     }
 }
