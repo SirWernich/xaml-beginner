@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using RestaurantManager.Models;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,7 +25,7 @@ namespace RestaurantManager.UniversalWindows
     {
         public OrderPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
@@ -34,12 +35,12 @@ namespace RestaurantManager.UniversalWindows
 
         private void AddToOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            // implement "add to order" logic
+            // implement button event
         }
 
         private void SubmitOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            // implement "submit order" logic
+            // implement button event        }
         }
     }
 }
